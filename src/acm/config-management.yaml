@@ -1,0 +1,15 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  clusterName: cluster-1
+  git:
+    syncRepo: https://github.com/[your-git-user-name]/gcp-kcc-samples.git
+    syncBranch: master
+    secretType: none
+    policyDir: "src/wp-acm/acm-root"
+  configConnector:
+    enabled: true
+  policyController:
+    enabled: true
