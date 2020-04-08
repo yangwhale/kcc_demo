@@ -16,3 +16,9 @@ cnrm-system@[PROJECTID].iam.gserviceaccount.com \
 --member="serviceAccount:[PROJECTID].svc.id.goog[cnrm-system/cnrm-controller-manager]" \
 --role="roles/iam.workloadIdentityUser"
 ```
+
+Insall CRD and create RBAC for KCC
+```bash
+kubectl apply -f install-bundle-workload-identity/crds.yaml
+kubectl apply -f install-bundle-workload-identity/0-cnrm-system.yaml
+```
