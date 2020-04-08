@@ -1,5 +1,7 @@
 # install KCC on GKE steps
 
+* Note: replace [PROJECTID] with your projectid in command line and install-bundle-workload-identity/0-cnrm-system.yaml
+
 Create service account and attach project owner role for KCC connector to operate GCP
 
 ```bash
