@@ -1,0 +1,8 @@
+apiVersion: dns.cnrm.cloud.google.com/v1beta1
+kind: DNSManagedZone
+metadata:
+  name: gcp-com
+  annotations:
+      cnrm.cloud.google.com/deletion-policy: abandon
+spec:
+  dnsName: "gcp.com."
