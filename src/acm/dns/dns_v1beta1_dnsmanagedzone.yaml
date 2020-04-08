@@ -6,3 +6,4 @@ metadata:
       cnrm.cloud.google.com/deletion-policy: abandon
 spec:
   dnsName: "higcp.com."
+
