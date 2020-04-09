@@ -3,13 +3,13 @@ kind: ConfigManagement
 metadata:
   name: config-management
 spec:
-  clusterName: cluster-1
+  clusterName: demo-gke
   git:
-    syncRepo: https://github.com/[your-git-user-name]/gcp-kcc-samples.git
+    syncRepo: https://github.com/yangwhale/kcc_demo.git
     syncBranch: master
     secretType: none
-    policyDir: "src/wp-acm/acm-root"
+    policyDir: "src/acm/dns"
   configConnector:
     enabled: true
   policyController:
-    enabled: true
+    enabled: false
