@@ -5,5 +5,5 @@ metadata:
   annotations:
       cnrm.cloud.google.com/deletion-policy: abandon
 spec:
-  dnsName: "higcp.com."
+  dnsName: "higcp.com." 
 
