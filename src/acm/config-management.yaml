@@ -8,7 +8,7 @@ spec:
     syncRepo: https://github.com/yangwhale/kcc_demo.git
     syncBranch: master
     secretType: none
-    policyDir: "src/acm/dns"
+    policyDir: "src/acm-root"
   configConnector:
     enabled: true
   policyController:
