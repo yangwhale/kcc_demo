@@ -1,0 +1,11 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  name: spanner-coffee-sa-policy
+spec:
+  member: serviceAccount:spanner-coffee-sa@chris-demo-258505.iam.gserviceaccount.com
+  role: roles/spanner.databaseAdmin
+  resourceRef:
+    kind: Project 
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    external: chris-demo-258505

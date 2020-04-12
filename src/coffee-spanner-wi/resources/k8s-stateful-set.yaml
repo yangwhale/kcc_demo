@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  namespace: default
+  name: coffee
+spec:
+  selector:
+    matchLabels:
+      app: coffee
+  serviceName: "coffee"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: coffee
+    spec:
+      terminationGracePeriodSeconds: 30
+      serviceAccountName: spanner-coffee-ksa-wi
+      containers:
+      - name: coffee
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "1000Mi"
+        image: gcr.io/chris-demo-258505/coffee-spanner:0.1.1
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: SPANNERINSTANCEID
+          valueFrom:
+            secretKeyRef:
+              name: spanner-coffee-db-credentials
+              key: instanceid
+        - name: SPANNERDB
+          valueFrom:
+            secretKeyRef:
+              name: spanner-coffee-db-credentials
+              key: dbname
+        ports:
+        - containerPort: 8080
+

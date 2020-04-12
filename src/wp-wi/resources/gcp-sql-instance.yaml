@@ -1,0 +1,13 @@
+apiVersion: sql.cnrm.cloud.google.com/v1beta1
+kind: SQLInstance
+metadata:
+  labels:
+    label-one: "value-one"
+  name: wp-db-01
+  annotations:
+      cnrm.cloud.google.com/deletion-policy: abandon
+spec:
+  databaseVersion: MYSQL_5_7
+  region: us-central1
+  settings:
+    tier: db-f1-micro

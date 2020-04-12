@@ -1,0 +1,7 @@
+apiVersion: spanner.cnrm.cloud.google.com/v1beta1
+kind: SpannerDatabase
+metadata:
+  name: spannerdatabase-01
+spec:
+  instanceRef:
+    name: spannerinstance-01

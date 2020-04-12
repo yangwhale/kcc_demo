@@ -1,0 +1,8 @@
+apiVersion: spanner.cnrm.cloud.google.com/v1beta1
+kind: SpannerInstance
+metadata:
+  name: spannerinstance-01
+spec:
+  config: regional-us-central1
+  displayName: Spanner Database for Coffee
+  numNodes: 1
